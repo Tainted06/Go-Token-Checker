@@ -1,27 +1,25 @@
-# Go-UFTC
+# Go-Token-Checker
 Discord Token Checker Proxyless/Fast
 
-star ⭐ For support !
-
-
+Star ⭐ or support!
 
 ```
-1. put Tokens in tokens.txt
-2. run main.go or if you dont want to install GO use the Releases
-3. Enjoy
+1. Download GoLang and the source code or download the exe from releases 
+2. Put your tokens into input.txt
+3. Run the exe or run the code
+4. Results will be printed to the console and saved in the files
 ```
 
 ![NVIDIA_Share_2l1iAdgZbB](https://user-images.githubusercontent.com/110062350/203656244-88bb929b-5081-4489-8740-55b50eb723e7.gif)
 
-
+```ruby
+Config Information:
+- The first field is check_flagged, if you would like the checker to check for flagged tokens then set it to true, if not then false
+- The second field is offset_ms, this is how long it will wait between each token in milliseconds
+```
 
 ```ruby
-Go Raider
-
-Token Joiner With GoRoutines And Works without Proxies
-all tested with 200-300 mpbs
-Speeds = {
-1000 tokens = 1.4 seconds
-}
-
+- All token formats (token, email:pass:token, etc) are supported as long as the token is the longest part of it
+- If you find any bugs with it make a pull request or an issue
+- This tool is an educational POC tool to demonstrate how goroutines can be used to send requests 
 ```
