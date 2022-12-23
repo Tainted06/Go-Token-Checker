@@ -3,6 +3,7 @@ Discord Token Checker Proxyless & Fast
 
 Star ⭐ for support!
 
+# Usage
 ```
 1. Download GoLang and the source code or download the exe from releases 
 2. Put your tokens into input.txt
@@ -12,20 +13,20 @@ Star ⭐ for support!
 
 ![NVIDIA_Share_2l1iAdgZbB](https://user-images.githubusercontent.com/110062350/203656244-88bb929b-5081-4489-8740-55b50eb723e7.gif)
 
+# Config Information
 ```
-Config Information:
 - The first field is check_flagged, if you would like the checker to check for flagged tokens then set it to true, if not then false
 - The second field is offset_ms, this is how long it will wait between each token in milliseconds
 ```
 
+# Ratelimit Information
 ```
-Ratelimit Information:
 - If you enable checking for flags and check a lot of tokens, there is the possibility of getting ratelimited
 - To avoid ratelimits either don't check for flagged or increase the offset
 ```
 
+# Other Information
 ```
-Other Information:
 - All token formats (token, email:pass:token, etc) are supported as long as the token is the longest part of it
 - If you find any bugs with it make a pull request or an issue
 - This tool is an educational POC tool to demonstrate how goroutines can be used to send requests 
