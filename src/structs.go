@@ -6,14 +6,15 @@ import (
 
 // Checker instance structure
 type Checker struct {
-	Client  http.Client
-	Invalid int
-	Flagged int
-	Locked  int
-	Token   string
-	Valid   int
-	Resp    bool
-	All     int
+	InvalidResp bool
+	Client      http.Client
+	Invalid     int
+	Flagged     int
+	Locked      int
+	Token       string
+	Valid       int
+	Resp        bool
+	All         int
 }
 
 // Config structure

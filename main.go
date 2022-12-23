@@ -77,12 +77,11 @@ func main() {
 				// Save token
 				if checker.Resp == true {
 					checker.OpnFile("valid.txt", token[i])
-				} else if checker.Resp == false {
+				} else if checker.Resp == false && checker.InvalidResp == false {
 					checker.OpnFile("locked.txt", token[i])
-				} else {
+				} else if checker.InvalidResp == true {
 					checker.OpnFile("invalid.txt", token[i])
 				}
-
 			}(i)
 		}
 		wg.Wait()

@@ -39,13 +39,17 @@ func (Xc *Checker) Check(token string) string {
 	// Process response
 	if resp.StatusCode == 200 {
 		typ = true
+		Xc.InvalidResp = false
 		fmt.Println("["+g+"✓"+r+"] ("+u+""+g+"VALID"+u+""+rb+"):", Xc.FormatToken(token))
 		Xc.Valid++
 	} else if resp.StatusCode == 403 {
 		typ = false
+		Xc.InvalidResp = false
 		fmt.Println("[\033[33m/"+r+"] ("+u+""+c+"LOCKED"+u+""+rb+"):", Xc.FormatToken(token))
 		Xc.Locked++
 	} else {
+		typ = false
+		Xc.InvalidResp = true
 		fmt.Println("[\033[31mX"+r+"] ("+u+""+c+"INVALID"+u+""+rb+"):", Xc.FormatToken(token))
 		Xc.Invalid++
 	}

@@ -3,7 +3,6 @@ package source
 import (
 	"bufio"
 	"fmt"
-	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -61,7 +60,7 @@ func (Xc *Checker) OpnFile(file string, token string) {
 // Handling errors
 func (Xc *Checker) Errs(err error) {
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("[\033[33m/"+r+"] ("+u+""+c+"ERROR"+u+""+rb+"):", err.Error())
 	}
 }
 
