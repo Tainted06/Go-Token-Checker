@@ -4,6 +4,7 @@ import (
 	"net/http"
 )
 
+// Checker instance structure
 type Checker struct {
 	Client  http.Client
 	Invalid int
@@ -15,11 +16,13 @@ type Checker struct {
 	All     int
 }
 
+// Config structure
 type Config struct {
 	CheckFlagged bool `json:"check_flagged"`
 	Offset       int  `json:"offset_ms"`
 }
 
+// Variables
 var (
 	z                      = "\033[36m"
 	url                    = "https://discord.com/api/v9/users/@me/affinities/guilds"
