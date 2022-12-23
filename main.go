@@ -32,6 +32,17 @@ func main() {
 	// Colors
 	c, r, rb, u := "\u001b[30;1m", "\033[39m", "\u001b[0m", "\u001b[4m"
 
+	// Console title function
+	go func(flagged bool) {
+		for {
+			if flagged {
+				source.SetTitle(fmt.Sprintf("GO Token Checker - github.com/Tainted06/Go-Token-Checker - Flagged: %d - Locked: %d - Invalid: %d - Valid: %d - Total: %d", checker.Flagged, checker.Locked, checker.Invalid, checker.Valid, checker.All))
+			} else {
+				source.SetTitle(fmt.Sprintf("GO Token Checker - github.com/Tainted06/Go-Token-Checker - Locked: %d - Invalid: %d - Valid: %d - Total: %d", checker.Locked, checker.Invalid, checker.Valid, checker.All))
+			}
+		}
+	}(config.CheckFlagged)
+
 	// Starting
 	start := time.Now()
 	if len(token) != 0 {

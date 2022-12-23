@@ -79,3 +79,10 @@ func (Xc *Checker) FormatToken(token string) string {
 		return token
 	}
 }
+
+// Set title
+func SetTitle(title string) {
+	cmd := exec.Command("cmd", "/C", "title "+title)
+	cmd.Stdout = os.Stdout
+	cmd.Run()
+}
