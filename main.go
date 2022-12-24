@@ -95,4 +95,5 @@ func main() {
 	} else {
 		fmt.Println("[\033[32m✓\033[39m] (TIME\033[39m):", elapsedStr+" s", "\033[39m(\033[33mLOCKED\033[39m):", checker.Locked, "(\033[31mINVALID\033[39m):", checker.Invalid, "(\033[32mVALID\033[39m):", checker.Valid, "(\u001b[34;1mTOTAL\033[39m):", checker.All)
 	}
+	select {}
 }
