@@ -31,3 +31,11 @@ Star ⭐ for support!
 - If you find any bugs with it make a pull request or an issue
 - This tool is an educational POC tool to demonstrate how goroutines can be used to send requests 
 ```
+
+# Benchmarks
+```
+With checking for flagged enabled and a 1 ms offset, 1,989 tokens got checked in 4.3 seconds 
+With checking for flagged enabled and a 1 ms offset, 2,605 tokens got checked in 5.6 seconds
+With checking for flagged enabled and a 1 ms offset, 73,311 tokens got checked in 116.5 seconds
+With checking for flagged disabled and 1 ms offset, 95,289 tokens got checked in 239.7 seconds
+```
